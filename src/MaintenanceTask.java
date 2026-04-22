@@ -22,12 +22,24 @@ public class MaintenanceTask {
         return mileage;
     }
 
+    public void setMileage(int mileage) {
+        this.mileage = mileage;
+    }
+
     public String getItem() {
         return item;
     }
 
+    public void setItem(String item) {
+        this.item = item;
+    }
+
     public String getAction() {
         return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
     }
 
     public Status getStatus() {
@@ -38,7 +50,8 @@ public class MaintenanceTask {
         this.status = status;
     }
 
+    @Override
     public String toString() {
-        return id + " | " + mileage + " | " + item + " | " + action + " | " + status;
+        return String.format("%-5d %-10d %-20s %-25s %-15s", id, mileage, item, action, status);
     }
 }
